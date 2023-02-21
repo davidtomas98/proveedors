@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ proveedor.nombre }}{% endblock %}
+
+{% block body %}
+    <table>
+    <h1>{{ proveedor.nombre }}</h1>
+        <tr>
+            <th>Correo : </th>
+            <td>{{ proveedor.correo }}</td>
+        </tr>
+        <tr>
+            <th>Telefono : </th>
+            <td>{{ proveedor.telefono }}</td>
+        </tr>
+        <tr>
+            <th>Tipo : </th>
+            <td>{{ proveedor.tipo }}</td>
+        </tr>
+        <tr>
+            <th>Activo : </th>
+            <td>{{ proveedor.activo }}</td>
+        </tr>
+    </table>
+    <hr>
+    <a href="/">Atràs</a>
+{% endblock %}

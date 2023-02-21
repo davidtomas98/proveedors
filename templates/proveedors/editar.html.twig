@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Proveedor{% endblock %}
+
+{% block body %}
+    {{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+    <fieldset>
+        <div class="form-group">
+            {{ form_label(form.nombre) }}
+            {{ form_widget(form.nombre, {'attr' :{'class' : 'form-control', 'placeholder' : 'Your name'}}) }}
+            <span class="text-danger">{{ form_errors(form.nombre) }}</span>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.correo) }}
+            {{ form_widget(form.correo, {'attr' :{'class' : 'form-control', 'placeholder' : 'Your mail'}}) }}
+            <span class="text-danger">{{ form_errors(form.correo) }}</span>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.telefono) }}
+            {{ form_widget(form.telefono, {'attr' :{'class' : 'form-control', 'placeholder' : 'Your number'}}) }}
+            <span class="text-danger">{{ form_errors(form.telefono) }}</span>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.tipo) }}
+            {{ form_widget(form.tipo, {'attr' :{'class' : 'form-control'}}) }}
+            <span class="text-danger">{{ form_errors(form.tipo) }}</span>
+        </div>
+        <div class="checkbox">
+            <label>
+                {{ form_widget(form.activo) }}Activo
+                <span class="text-danger">{{ form_errors(form.activo) }}</span>
+            </label>
+        </div>
+    </fieldset>
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}
